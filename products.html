@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse thoughtful second-hand finds from the ReLoop community.">
+  <title>Browse items — ReLoop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/translations.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><nav class="nav container" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="ReLoop home"><span class="brand-mark" aria-hidden="true">⟳</span>ReLoop</a>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="nav-links"><a href="index.html" data-i18n="navHome">Home</a><a href="products.html" data-i18n="navBrowse">Browse</a><a href="sell.html" data-i18n="navSell">Sell an item</a><a href="#contact" data-i18n="navContact">Contact</a><button class="language-toggle" type="button" aria-label="Switch language"><span>EN</span><span class="language-divider">|</span><span>عربي</span></button></div>
+  </nav></header>
+  <main>
+    <section class="page-hero container"><div><p class="eyebrow" data-i18n="browseEyebrow">The ReLoop edit</p><h1 data-i18n="browseTitle">Find your next<br>favorite thing.</h1><p data-i18n="browseDescription">One person's almost-forgotten is another's just-right. Take a look around.</p></div><div class="page-hero-aside"><span class="page-hero-line"></span><p data-i18n="browseAside">Every item has a past.<br>Find out where it goes next.</p></div></section>
+    <section class="section container browse-section">
+      <div class="browse-top"><div><p class="eyebrow" data-i18n="browseAllEyebrow">Browse what's out there</p><h2 data-i18n="allItems">All items</h2></div><p class="results-count" id="results-count" aria-live="polite"></p></div>
+      <form class="filters" id="product-filters">
+        <label class="filter-field search-field"><span data-i18n="searchLabel">Search</span><input type="search" id="product-search" data-i18n-placeholder="searchPlaceholder" placeholder="Try “jacket”"></label>
+        <label class="filter-field"><span data-i18n="categoryLabel">Category</span><select id="category-filter"><option value="all" data-i18n="allCategories">All categories</option></select></label>
+        <label class="filter-field"><span data-i18n="sortLabel">Sort by</span><select id="sort-filter"><option value="default" data-i18n="sortNewest">Newest first</option><option value="low" data-i18n="sortLow">Price: low to high</option><option value="high" data-i18n="sortHigh">Price: high to low</option></select></label>
+        <label class="filter-field price-field"><span><span data-i18n="priceRange">Maximum price</span> <b id="price-value"></b></span><input type="range" id="price-filter" min="0" max="50000" step="500" value="50000"></label>
+        <button class="filter-reset" type="reset" data-i18n="clearFilters">Clear filters</button>
+      </form>
+      <div class="product-grid" id="all-products"></div>
+      <div class="empty-state" id="empty-state" hidden><span class="empty-mark" aria-hidden="true">↗</span><h3 data-i18n="emptyTitle">Nothing here just yet.</h3><p data-i18n="emptyDescription">Try a different search or clear your filters.</p><button class="button button-primary" id="empty-reset" type="button" data-i18n="clearFilters">Clear filters</button></div>
+    </section>
+    <section class="safety-section"><div class="container safety-inner"><div><p class="eyebrow" data-i18n="safetyEyebrow">A safer handoff</p><h2 data-i18n="safetyTitle">Good deals. Smart meetups.</h2></div><ul><li data-i18n="safetyPublic">Meet in a public place.</li><li data-i18n="safetyCheck">Check the item before paying.</li></ul></div></section>
+    <section class="section container contact-section" id="contact"><div class="contact-intro"><p class="eyebrow" data-i18n="contactEyebrow">We’re here to help</p><h2 data-i18n="contactTitle">Say hello.</h2><p data-i18n="contactDescription">Have a question or a thought to share? Send us a note and we’ll be in touch.</p></div><form class="contact-form" novalidate><div class="form-row"><label><span data-i18n="nameLabel">Your name</span><input name="name" type="text" autocomplete="name" required data-i18n-placeholder="namePlaceholder" placeholder="Name"></label><label><span data-i18n="emailLabel">Email address</span><input name="email" type="email" autocomplete="email" required data-i18n-placeholder="emailPlaceholder" placeholder="you@example.com"></label></div><label><span data-i18n="messageLabel">Your message</span><textarea name="message" rows="4" required data-i18n-placeholder="messagePlaceholder" placeholder="How can we help?"></textarea></label><div class="form-footer"><p class="form-status" role="status" aria-live="polite"></p><button class="button button-primary" type="submit" data-i18n="sendMessage">Send message <span aria-hidden="true">↗</span></button></div></form></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">⟳</span>ReLoop</a><p data-i18n="footerLine">A second life for the things we love.</p><div class="footer-links"><a href="products.html" data-i18n="navBrowse">Browse</a><a href="sell.html" data-i18n="navSell">Sell an item</a><a href="index.html#about" data-i18n="navAbout">About</a></div><small>© <span class="current-year"></span> ReLoop</small></div></footer>
+  <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+</body>
+</html>

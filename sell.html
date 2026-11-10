@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="List an item for sale on ReLoop and give it a second life.">
+  <title>Sell an item — ReLoop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/translations.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><nav class="nav container" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="ReLoop home"><span class="brand-mark" aria-hidden="true">⟳</span>ReLoop</a>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="nav-links"><a href="index.html" data-i18n="navHome">Home</a><a href="products.html" data-i18n="navBrowse">Browse</a><a href="sell.html" data-i18n="navSell">Sell an item</a><a href="#contact" data-i18n="navContact">Contact</a><button class="language-toggle" type="button" aria-label="Switch language"><span>EN</span><span class="language-divider">|</span><span>عربي</span></button></div>
+  </nav></header>
+  <main>
+    <section class="page-hero container sell-hero"><div><p class="eyebrow" data-i18n="sellEyebrow">Make room for what's next</p><h1 data-i18n="sellTitle">Your next chapter<br>starts here.</h1><p data-i18n="sellDescription">List something you no longer need and help it find the person who will love it next.</p></div><div class="page-hero-aside"><span class="page-hero-line"></span><p data-i18n="sellAside">A few details, a fresh start.<br>Listing is simple and free.</p></div></section>
+    <section class="section container sell-section"><div class="sell-intro"><p class="eyebrow" data-i18n="listingDetails">Listing details</p><h2 data-i18n="sellFormTitle">Let's give it<br>a new home.</h2><p data-i18n="sellFormDescription">Add the details buyers need to know. Clear photos and honest descriptions help the right person find your item.</p><div class="sell-side-note"><span class="note-rule"></span><span data-i18n="sellPrivateNote">Your phone number is only shared when a buyer contacts you.</span></div></div>
+      <form class="sell-form" id="sell-form" novalidate>
+        <label><span data-i18n="productNameLabel">Product name</span><input id="sell-name" name="name" type="text" maxlength="70" required data-i18n-placeholder="productNamePlaceholder" placeholder="e.g. Denim jacket"></label>
+        <div class="form-row"><label><span data-i18n="categoryLabel">Category</span><select id="sell-category" name="category" required><option value="" data-i18n="chooseCategory">Choose a category</option></select></label><label><span data-i18n="priceLabel">Price (EGP)</span><input id="sell-price" name="price" type="number" min="1" max="10000000" step="1" required data-i18n-placeholder="pricePlaceholder" placeholder="e.g. 850"></label></div>
+        <label><span data-i18n="conditionLabel">Condition</span><select id="sell-condition" name="condition" required><option value="" data-i18n="chooseCondition">Choose condition</option><option value="Like New" data-i18n="conditionLikeNew">Like New</option><option value="Good" data-i18n="conditionGood">Good</option><option value="Used" data-i18n="conditionUsed">Used</option></select></label>
+        <label><span data-i18n="descriptionLabel">Description</span><textarea id="sell-description" name="description" rows="4" maxlength="500" required data-i18n-placeholder="descriptionPlaceholder" placeholder="Share a few useful details about your item"></textarea></label>
+        <label><span data-i18n="phoneLabel">WhatsApp phone number</span><input id="sell-phone" name="phone" type="tel" autocomplete="tel" required data-i18n-placeholder="phonePlaceholder" placeholder="+20 100 000 0000"><small class="field-help" data-i18n="phoneHelp">Include your country code so buyers can reach you.</small></label>
+        <label class="upload-label"><span data-i18n="photoLabel">Item photo</span><input id="sell-photo" name="photo" type="file" accept="image/*" required><span class="upload-box"><span class="upload-icon" aria-hidden="true">＋</span><span data-i18n="photoUpload">Choose a photo from your device</span><small data-i18n="photoLimit">JPG, PNG or WebP · up to 5 MB</small></span></label>
+        <div class="image-preview-wrap" id="image-preview-wrap" hidden><img id="image-preview" alt="" /><span id="image-preview-name"></span></div>
+        <p class="form-status sell-status" id="sell-status" role="status" aria-live="polite"></p>
+        <button class="button button-primary sell-submit" type="submit" data-i18n="publishListing">Publish listing <span aria-hidden="true">↗</span></button>
+      </form>
+    </section>
+    <section class="safety-section"><div class="container safety-inner"><div><p class="eyebrow" data-i18n="safetyEyebrow">A safer handoff</p><h2 data-i18n="safetyTitle">Good deals. Smart meetups.</h2></div><ul><li data-i18n="safetyPublic">Meet in a public place.</li><li data-i18n="safetyCheck">Check the item before paying.</li></ul></div></section>
+    <section class="section container contact-section" id="contact"><div class="contact-intro"><p class="eyebrow" data-i18n="contactEyebrow">We’re here to help</p><h2 data-i18n="contactTitle">Say hello.</h2><p data-i18n="contactDescription">Have a question or a thought to share? Send us a note and we’ll be in touch.</p></div><form class="contact-form" novalidate><div class="form-row"><label><span data-i18n="nameLabel">Your name</span><input name="name" type="text" autocomplete="name" required data-i18n-placeholder="namePlaceholder" placeholder="Name"></label><label><span data-i18n="emailLabel">Email address</span><input name="email" type="email" autocomplete="email" required data-i18n-placeholder="emailPlaceholder" placeholder="you@example.com"></label></div><label><span data-i18n="messageLabel">Your message</span><textarea name="message" rows="4" required data-i18n-placeholder="messagePlaceholder" placeholder="How can we help?"></textarea></label><div class="form-footer"><p class="form-status" role="status" aria-live="polite"></p><button class="button button-primary" type="submit" data-i18n="sendMessage">Send message <span aria-hidden="true">↗</span></button></div></form></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">⟳</span>ReLoop</a><p data-i18n="footerLine">A second life for the things we love.</p><div class="footer-links"><a href="products.html" data-i18n="navBrowse">Browse</a><a href="sell.html" data-i18n="navSell">Sell an item</a><a href="index.html#about" data-i18n="navAbout">About</a></div><small>© <span class="current-year"></span> ReLoop</small></div></footer>
+  <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+</body>
+</html>

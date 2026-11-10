@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Give good things another life with ReLoop, your neighborhood second-hand marketplace.">
+  <title>ReLoop — Find your next favorite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/translations.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="ReLoop home"><span class="brand-mark" aria-hidden="true">⟳</span>ReLoop</a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="index.html" data-i18n="navHome">Home</a>
+        <a href="products.html" data-i18n="navBrowse">Browse</a>
+        <a href="sell.html" data-i18n="navSell">Sell an item</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+        <button class="language-toggle" type="button" aria-label="Switch language"><span>EN</span><span class="language-divider">|</span><span>عربي</span></button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="homeEyebrow">Good finds. A lighter footprint.</p>
+        <h1 data-i18n="homeTitle">Give good things<br>another life.</h1>
+        <p class="hero-text" data-i18n="homeDescription">Find pre-loved pieces worth keeping, or pass along something you no longer need. Better for your home, and the next one.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="products.html" data-i18n="browseItems">Browse items</a>
+          <a class="text-link" href="sell.html" data-i18n="startSelling">Start selling <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-note"><span class="note-rule"></span><span data-i18n="heroNote">Thoughtful finds, right around the corner.</span></div>
+      </div>
+      <div class="hero-visual">
+        <img src="image/caio-coelho-QRN47la37gw-unsplash.jpg" alt="A well-loved denim jacket ready for a new owner">
+        <div class="hero-stamp"><span data-i18n="heroStamp">SECOND<br>CHANCES<br>LOOK GOOD</span></div>
+        <p class="image-caption" data-i18n="heroCaption">A little more life in every thing.</p>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="categories-title">
+      <div class="section-heading">
+        <div><p class="eyebrow" data-i18n="categoryEyebrow">Explore the marketplace</p><h2 id="categories-title" data-i18n="categoryTitle">A good place to look</h2></div>
+        <a class="text-link" href="products.html" data-i18n="viewAll">View all items <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="category-list">
+        <a class="category-tile" href="products.html?category=Clothes"><span class="category-number">01</span><span data-i18n="catClothes">Clothes</span><span class="category-arrow" aria-hidden="true">↗</span></a>
+        <a class="category-tile" href="products.html?category=Shoes"><span class="category-number">02</span><span data-i18n="catShoes">Shoes</span><span class="category-arrow" aria-hidden="true">↗</span></a>
+        <a class="category-tile" href="products.html?category=Bags"><span class="category-number">03</span><span data-i18n="catBags">Bags</span><span class="category-arrow" aria-hidden="true">↗</span></a>
+        <a class="category-tile" href="products.html?category=Glasses"><span class="category-number">04</span><span data-i18n="catGlasses">Glasses</span><span class="category-arrow" aria-hidden="true">↗</span></a>
+        <a class="category-tile" href="products.html?category=Electronics"><span class="category-number">05</span><span data-i18n="catElectronics">Electronics</span><span class="category-arrow" aria-hidden="true">↗</span></a>
+        <a class="category-tile" href="products.html?category=Furniture"><span class="category-number">06</span><span data-i18n="catFurniture">Furniture</span><span class="category-arrow" aria-hidden="true">↗</span></a>
+        <a class="category-tile" href="products.html?category=Accessories"><span class="category-number">07</span><span data-i18n="catAccessories">Accessories</span><span class="category-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="section section-soft" aria-labelledby="fresh-title">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow" data-i18n="freshEyebrow">Just listed</p><h2 id="fresh-title" data-i18n="freshTitle">Fresh finds</h2></div>
+          <a class="text-link" href="products.html" data-i18n="seeAllFresh">See all fresh finds <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="product-grid product-grid-home" id="fresh-products"></div>
+      </div>
+    </section>
+
+    <section class="about-section container" id="about">
+      <div class="about-mark" aria-hidden="true">R.</div>
+      <div class="about-copy"><p class="eyebrow" data-i18n="aboutEyebrow">A marketplace with a little more meaning</p><h2 data-i18n="aboutTitle">Good things deserve<br>more than one story.</h2></div>
+      <div class="about-detail"><p data-i18n="aboutDescription">ReLoop makes it easy to find a new favorite and help useful things stay in circulation. Browse nearby listings, talk directly with sellers, and give every purchase a second chapter.</p><a class="text-link" href="products.html" data-i18n="discoverReLoop">Discover ReLoop <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="safety-section">
+      <div class="container safety-inner"><div><p class="eyebrow" data-i18n="safetyEyebrow">A safer handoff</p><h2 data-i18n="safetyTitle">Good deals. Smart meetups.</h2></div><ul><li data-i18n="safetyPublic">Meet in a public place.</li><li data-i18n="safetyCheck">Check the item before paying.</li></ul></div>
+    </section>
+
+    <section class="section container contact-section" id="contact">
+      <div class="contact-intro"><p class="eyebrow" data-i18n="contactEyebrow">We’re here to help</p><h2 data-i18n="contactTitle">Say hello.</h2><p data-i18n="contactDescription">Have a question or a thought to share? Send us a note and we’ll be in touch.</p></div>
+      <form class="contact-form" novalidate>
+        <div class="form-row"><label><span data-i18n="nameLabel">Your name</span><input name="name" type="text" autocomplete="name" required data-i18n-placeholder="namePlaceholder" placeholder="Name"></label><label><span data-i18n="emailLabel">Email address</span><input name="email" type="email" autocomplete="email" required data-i18n-placeholder="emailPlaceholder" placeholder="you@example.com"></label></div>
+        <label><span data-i18n="messageLabel">Your message</span><textarea name="message" rows="4" required data-i18n-placeholder="messagePlaceholder" placeholder="How can we help?"></textarea></label>
+        <div class="form-footer"><p class="form-status" role="status" aria-live="polite"></p><button class="button button-primary" type="submit" data-i18n="sendMessage">Send message <span aria-hidden="true">↗</span></button></div>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">⟳</span>ReLoop</a><p data-i18n="footerLine">A second life for the things we love.</p><div class="footer-links"><a href="products.html" data-i18n="navBrowse">Browse</a><a href="sell.html" data-i18n="navSell">Sell an item</a><a href="#about" data-i18n="navAbout">About</a></div><small>© <span class="current-year"></span> ReLoop</small></div></footer>
+  <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+</body>
+</html>
